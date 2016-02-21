@@ -6,8 +6,8 @@
 #include "DHT.h"      //Adafruit DHT-sensor-library
 #define DHTPIN 5      // GPIO05 == D1
 #define DHTTYPE DHT22 // DHT11, DHT21, DHT22
-DHT dht(DHTPIN, DHTTYPE,
-        15); // ESP8266 initialize DHT as follows: DHT dht(DHTPIN, DHTTYPE, 15);
+DHT dht(DHTPIN, DHTTYPE, 15);
+// ESP8266 initialize DHT as follows: DHT dht(DHTPIN, DHTTYPE, 15);
 
 // WiFi parameters
 // const char* ssid = "........";        //WiFi.SSID()
