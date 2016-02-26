@@ -1,7 +1,7 @@
 # dweet3
 
-What I hear, I forget; What I see, I remember; What I do, I understand.
-  																							—Confucius, 551-479 BC
+>What I hear, I forget; What I see, I remember; What I do, I understand.
+>   																							—Confucius, 551-479 BC
 
 Simple Arduino core for ESP8266 project for measurement internal and EXTERNAL temperature and hummidity.
 
