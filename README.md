@@ -1,5 +1,8 @@
 # dweet3
 
+What I hear, I forget; What I see, I remember; What I do, I understand.
+  																							—Confucius, 551-479 BC
+
 Simple Arduino core for ESP8266 project for measurement internal and EXTERNAL temperature and hummidity.
 
 - DHT22 (for internal measurement)
@@ -8,5 +11,10 @@ Simple Arduino core for ESP8266 project for measurement internal and EXTERNAL te
 
 ## See outputs in
 
-<http://dweet.io/follow/kuchyn>
-<http://dweet.io/follow/kravak>
+- internal: <http://dweet.io/follow/kuchyn>
+- external: <http://dweet.io/follow/kravak>
+
+## Components:
+
+- ESP8266 (nodemcu)
+- DHT22 temperature and hummidity sensor (on board on with resistor)

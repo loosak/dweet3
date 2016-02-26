@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>dweetio</title>
+    <script src="http://code.jquery.com/jquery-1.5.js"></script>
+    <script type='text/javascript'>
+
+    function getData() {
+        $.getJSON('http://dweet.io/get/latest/dweet/for/kuchyn', function(data) {
+            //{"this":"succeeded","by":"getting","the":"dweets","with":[{"thing":"kuchyn","created":"2015-12-14T22:00:51.833Z","content":{"temperature":27.3,"humidity":32.8}}]}
+
+            //console.log(data); //uncomment this for debug
+            //console.log(data.this + " " + data.with[0].created + " " + data.with[0].content.temperature + " " + data.with[0].content.humidity ); //further debug
+            var created =     data.with[0].created;
+            var temperature = data.with[0].content.temperature/1;
+            var humidity =    data.with[0].content.humidity/1;
+            console.log(created,temperature,humidity);
+            document.getElementById('value1').innerHTML = created + "   " + temperature + "\260C   " + humidity + "%";
+        });
+
+        $.getJSON('http://dweet.io/get/latest/dweet/for/kravak', function(data) {
+            //{"this":"succeeded","by":"getting","the":"dweets","with":[{"thing":"kuchyn","created":"2015-12-14T22:00:51.833Z","content":{"temperature":27.3,"humidity":32.8}}]}
+
+            //console.log(data); //uncomment this for debug
+            //console.log(data.this + " " + data.with[0].created + " " + data.with[0].content.temperature + " " + data.with[0].content.humidity ); //further debug
+            var created =     data.with[0].created;
+            var temperature = data.with[0].content.temperature/1;
+            var humidity =    data.with[0].content.humidity/1;
+            console.log(created,temperature,humidity);
+            document.getElementById('value2').innerHTML = created + "   " + temperature + "\260C   " + humidity + "%";
+        });
+    }
+
+    getData();
+    setInterval('getData()', 60000); // refresh interval in milliseconds (60000 = 60 seconds)
+
+    </script>
+
+  </head>
+
+  <style type="text/css">
+    /*body { background-color: #ddd; }*/
+  </style>
+
+  <body>
+    <h1>Meteostanice</h1>
+    <h2>Kuchyň</h2>
+    <div id='value1'></div>
+    <h2>Kravák</h2>
+    <div id='value2'></div>
+  </body>
+</html>
